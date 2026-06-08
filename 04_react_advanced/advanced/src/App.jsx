@@ -24,6 +24,11 @@ const cars = [
 // Fragments
 import Fragment from "./components/Fragment";
 
+// Childen
+import Container from "./components/Container";
+
+
+
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "50px" }}>
@@ -56,6 +61,10 @@ function App() {
       ))}
       {/* Fragment */}
       <Fragment />
+      {/* Children */}
+      <Container>
+        <p>Conteúdo</p>
+      </Container>
     </div>
   );
 }
