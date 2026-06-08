@@ -29,12 +29,23 @@ import Container from "./components/Container";
 
 // Função em prop
 import ExecuteFunction from "./components/ExecuteFunction";
+import { useState } from "react";
+
+// Elevação de State (State Lift)
+  import Message from "./components/Message";
+  import ChangeMessage from "./components/ChangeMessage";
 
 function App() {
   // Função em prop
   function showMessage() {
     console.log("Evento do componente pai");
   }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
   return (
     <div className="App" style={{ paddingBottom: "50px" }}>
@@ -73,6 +84,9 @@ function App() {
       </Container>
       {/* Função em prop */}
       <ExecuteFunction myFunction={showMessage} />
+      {/* State Lift */}
+      <Message msg={message} />
+      <ChangeMessage handleMessage={handleMessage} />
     </div>
   );
 }
