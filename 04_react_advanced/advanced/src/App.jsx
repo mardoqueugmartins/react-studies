@@ -9,10 +9,14 @@ import Data from './components/Data';
 
 // Renderização de lista
 import ListRender from './components/ListRender';
+import ShowUserName from './components/ShowUserName';
+
+// Desestruturando de props
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
-    <div className='App' style={{paddingBottom: "50px"}}>
+    <div className="App" style={{ paddingBottom: "50px" }}>
       <h1>Avançando em React</h1>
       {/* Imagem em public */}
       <img src="/img.jpg" alt="Street" />
@@ -24,6 +28,10 @@ function App() {
       <ListRender />
       {/* ConditionalRender */}
       <ConditionalRender />
+      {/* Props */}
+      <ShowUserName name="Mardoqueu" />
+      {/* Desestruturando Props */}
+      <CarDetails brand="Volkswagen"km={0} color="Branco"/>
     </div>
   );
 }
