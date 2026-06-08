@@ -19,7 +19,7 @@ const cars = [
   { id: 1, brand: "Ferrari", color: "Amarelo", km: 0 },
   { id: 2, brand: "KIA", color: "Azul", km: 5000 },
   { id: 3, brand: "Renault", color: "Laranja", km: 12000 },
-]
+];
 
 // Fragments
 import Fragment from "./components/Fragment";
@@ -27,9 +27,15 @@ import Fragment from "./components/Fragment";
 // Childen
 import Container from "./components/Container";
 
-
+// Função em prop
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
+  // Função em prop
+  function showMessage() {
+    console.log("Evento do componente pai");
+  }
+
   return (
     <div className="App" style={{ paddingBottom: "50px" }}>
       <h1>Avançando em React</h1>
@@ -53,10 +59,10 @@ function App() {
       {/* Renderização de lista com componente */}
       {cars.map((car) => (
         <CarDetails
-        key={car.id}
-        brand={car.brand}
-        color={car.color}
-        km={car.km}
+          key={car.id}
+          brand={car.brand}
+          color={car.color}
+          km={car.km}
         />
       ))}
       {/* Fragment */}
@@ -65,6 +71,8 @@ function App() {
       <Container>
         <p>Conteúdo</p>
       </Container>
+      {/* Função em prop */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
