@@ -21,6 +21,9 @@ const cars = [
   { id: 3, brand: "Renault", color: "Laranja", km: 12000 },
 ]
 
+// Fragments
+import Fragment from "./components/Fragment";
+
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "50px" }}>
@@ -51,6 +54,8 @@ function App() {
         km={car.km}
         />
       ))}
+      {/* Fragment */}
+      <Fragment />
     </div>
   );
 }
