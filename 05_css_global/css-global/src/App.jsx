@@ -6,6 +6,10 @@ import MyComponents from './components/MyComponents'
 // 4 - CSS Inline Dinâmico
 const n = 15;
 
+// 5 - Classe Dinâmica
+const redTittle = true;
+
+
 function App() {
   return (
     <div>
@@ -25,6 +29,8 @@ function App() {
       <h2 style={n > 20 ? { color: "green" } : { color: "red" }}>
         CSS Inline Dinâmico
       </h2>
+      {/* 5 - Classe Dinâmica */}
+      <h2 className={redTittle? "red-title" : "title"}>Esse título vai ter uma classe dinâmica</h2>
     </div>
   );
 }

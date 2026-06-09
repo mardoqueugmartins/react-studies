@@ -11,3 +11,10 @@ body {
 h1 {
   color: rgb(5, 1, 130);
 }
+
+/* Classe Dinâmica */
+.red-title {
+  font-size: 5rem;
+  color: rgb(254, 254, 254);
+  background-color: rgba(0, 82, 169, 0.761);
+}
