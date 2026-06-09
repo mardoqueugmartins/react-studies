@@ -9,6 +9,9 @@ const n = 15;
 // 5 - Classe Dinâmica
 const redTittle = true;
 
+// 6 - CSS Modules
+import Title from './components/title';
+
 
 function App() {
   return (
@@ -31,6 +34,8 @@ function App() {
       </h2>
       {/* 5 - Classe Dinâmica */}
       <h2 className={redTittle? "red-title" : "title"}>Esse título vai ter uma classe dinâmica</h2>
+      {/* 6 - CSS Module */}
+      <Title />
     </div>
   );
 }
